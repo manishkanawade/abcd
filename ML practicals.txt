@@ -1,0 +1,18 @@
+SLIP NO 1  --- IRIS DataSet
+
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+iris=load_iris()
+print(iris)
+print(iris.data[0:5,0:])
+plt.scatter(iris.data[:,0],iris.data[:,1],c=iris.target)
+
+plt.xlabel(iris.feature_names[0])
+plt.ylabel(iris.feature_names[1])
+plt.show()
+ir = pd.DataFrame(iris.data)
+ir.info()
+ir.describe()
+ir.head()
